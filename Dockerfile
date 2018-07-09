@@ -12,3 +12,5 @@ RUN /opt/ibm/wlp/bin/installUtility install  --acceptLicense \
 	jsp-2.3 \
 	servlet-3.1; exit 0
 
+RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y \
+&& rm -rf /var/lib/apt/lists/* 
